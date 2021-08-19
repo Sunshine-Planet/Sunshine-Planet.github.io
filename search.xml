@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>ML的时候,软件中心提示非法?</title>
+    <url>/2021/01/26/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>作为一名科学上网er，在中文环境下最喜欢用的就是ASUS路由器的路由器端科学上网了。又方便、又可以对NAT下的设备进行相关的控制。  </p>
+<blockquote>
+<p>这里要感谢我们的前辈!  </p>
+</blockquote>
+<p>但是由于<em>不可抗力</em>，我们在路由器端安装小飞机的时候，会提示含有非法关键词。<br>这时候我们无奈的前辈给出了解决方法</p>
+<blockquote>
+<p>提示1： 如果提示检测到离线安装包名有非法关键词，开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380/X7.x版本固件需要请将软件中心更新到1.4.8及以上)  </p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\tdetect_package/\t# detect_package/g&#x27; /koolshare/scripts/ks_tar_install.sh</span><br></pre></td></tr></table></figure>
+
+<p>这时候，我们就可以继续进行科学上网的相关操作了！  </p>
+<p><em>参考资料</em>  </p>
+<ul>
+<li><a href="https://github.com/hq450/fancyss">有关插件</a></li>
+<li><a href="https://koolshare.cn/forum-96-1.html">KS论坛</a></li>
+<li><a href="https://www.asuswrt-merlin.net/">ML官网</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Udpspeeder加Udp2raw个人使用模板</title>
+    <url>/2021/01/26/Udpspeeder%E5%8A%A0Udp2raw%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<h1 id="Udpspeeder"><a href="#Udpspeeder" class="headerlink" title="Udpspeeder"></a>Udpspeeder</h1><h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端:"></a>服务端:</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">请逐行执行,并自行修改相关内容</span><br><span class="line"># mkdir /root/udpspeeder</span><br><span class="line"># cd /root/udpspeeder</span><br><span class="line"># wget https://github.com/wangyu-/UDPspeeder/releases/*自己选择最新版本*</span><br><span class="line"># tar -zxf speederv2_binaries.tar.gz</span><br><span class="line"># ./speederv2_amd64 -s -l0.0.0.0:4096 -r127.0.0.1:48989 -f10:10 -k &quot;password&quot; --mode 0 --timeout 3</span><br></pre></td></tr></table></figure>
+<h3 id="配置介绍"><a href="#配置介绍" class="headerlink" title="配置介绍"></a>配置介绍</h3><ul>
+<li>_amd64     架构  </li>
+<li>4096       sever端口  </li>
+<li>48989      ss端口  </li>
+<li>-f10:10    发包参数<blockquote>
+<p><a href="https://github.com/wangyu-/UDPspeeder/wiki/%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C">使用经验</a>  </p>
+</blockquote>
+</li>
+<li>“password” 密码  </li>
+<li>-q1        路由器clinet其它参数  <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2></li>
+<li><blockquote>
+<p>服务器地址 ：端口<br>127.0.0.1 : 1093  </p>
+</blockquote>
+</li>
+<li>设置fec参数  </li>
+<li>设置timeout参数    </li>
+</ul>
+<h1 id="Udp2raw"><a href="#Udp2raw" class="headerlink" title="Udp2raw"></a>Udp2raw</h1><h2 id="服务端-1"><a href="#服务端-1" class="headerlink" title="服务端"></a>服务端</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">请逐行执行,并自行修改相关内容</span><br><span class="line"># mkdir /root/udp2raw</span><br><span class="line"># cd /root/udp2raw</span><br><span class="line"># tar -zxf udp2raw_binaries.tar.gz</span><br><span class="line"># wget https://github.com/wangyu-/udp2raw-tunnel/releases/*自己选择最新版本*</span><br></pre></td></tr></table></figure>
+<h3 id="配置介绍-1"><a href="#配置介绍-1" class="headerlink" title="配置介绍"></a>配置介绍</h3><ul>
+<li>_amd64        架构  </li>
+<li>4097 sever    端口  </li>
+<li>4096 Udpsever 端口  </li>
+<li>“password”    密码 </li>
+</ul>
+<p><strong>注意搭建Kcptun时mtu推荐为1200</strong>  </p>
+<h2 id="客户端-1"><a href="#客户端-1" class="headerlink" title="客户端"></a>客户端</h2><blockquote>
+<p>服务器地址 ：端口<br>vps ip : 4097  </p>
+</blockquote>
+<h1 id="设置开机俩服务自启-Debian系统"><a href="#设置开机俩服务自启-Debian系统" class="headerlink" title="设置开机俩服务自启(Debian系统)"></a>设置开机俩服务自启(Debian系统)</h1><blockquote>
+<p><a href="https://sb.sb/blog/debian-9-rc-local/">前置条件</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># vim /etc/rc.local</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://www.runoob.com/linux/linux-vim.html">vim使用</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># ./root/udpspeeder/speederv2_amd64 -s -l0.0.0.0:4096 -r127.0.0.1:48989 -f10:10 -k &quot;password&quot; --mode 0 --timeout 3 &amp;</span><br><span class="line"></span><br><span class="line"># ./root//udp2raw/udp2raw_amd64 -s -l0.0.0.0:4097 -r127.0.0.1:4096 -a -k &quot;password&quot; --raw-mode faketcp &amp;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在Vim插入模式下使用Shift + INS键进行粘贴操作  </p>
+</blockquote>
+<p>The END.</p>
+]]></content>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/2021/01/26/about/</url>
+    <content><![CDATA[<p>KONODIODA!</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>(施工中)Arch Linux个人安装步骤小记</title>
+    <url>/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a href="https://wiki.archlinux.org/index.php/Arch_Linux">Arch Linux</a>为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~</strong></p>
+<p><strong>Arch Linux 的官方 Wiki 上推荐使用 Live 系统安装 Arch Linux，我也在使用 Arch 的过程中，虽然也了解了那些一键安装脚本，但是。。。</strong></p>
+<h2 id="毕竟都用-Arch-了，就要做好折腾的觉悟好吧"><a href="#毕竟都用-Arch-了，就要做好折腾的觉悟好吧" class="headerlink" title="毕竟都用 Arch 了，就要做好折腾的觉悟好吧"></a><del>毕竟都用 Arch 了，就要做好折腾的觉悟好吧</del></h2><p><em>那么就让我们开始吧！</em></p>
+<h2 id="官方-Wiki-的安装过程"><a href="#官方-Wiki-的安装过程" class="headerlink" title="官方 Wiki 的安装过程"></a><strong>官方 Wiki 的安装过程</strong></h2><ul>
+<li>安装前的准备</li>
+<li>安装必须的软件包</li>
+<li>配置 Fstab 文件<blockquote>
+<p>fstab 文件可用于定义磁盘分区，各种其他块设备或远程文件系统应如何装入文件系统。</p>
+<blockquote>
+<p>说人话就是开机的时候自动挂载硬盘分区</p>
+</blockquote>
+</blockquote>
+</li>
+<li>Chroot（切换 root 用户）到已经安装好的系统</li>
+<li>设置时区以及本地化</li>
+<li>设置 hostname 和 hosts(主机名和 hosts 文件)</li>
+<li>设置 Root 用户密码</li>
+<li>安装引导程序</li>
+<li>安装完成，重启！</li>
+</ul>
+<p>本人设置模块化的引索目录，顺序进行即可正确安装<del>当然你是确定自己需要的步骤自取那就更好了，本来写这篇文章的目的就是这个 hahaha</del></p>
+<p><strong>这里按照我的习惯命名，细分并改变了一下安装顺序，请注意！</strong></p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h2><h3 id="下载-iso-格式镜像文件官方下载网站"><a href="#下载-iso-格式镜像文件官方下载网站" class="headerlink" title="下载 iso 格式镜像文件官方下载网站"></a>下载 iso 格式镜像文件<a href="https://archlinux.org/download/">官方下载网站</a></h3><h3 id="以-U-盘为-Live-环境，使用开源软件Ventory制作U盘启动盘"><a href="#以-U-盘为-Live-环境，使用开源软件Ventory制作U盘启动盘" class="headerlink" title="以 U 盘为 Live 环境，使用开源软件Ventory制作Ｕ盘启动盘"></a>以 U 盘为 Live 环境，使用开源软件<a href="https://www.ventoy.net/">Ventory</a>制作Ｕ盘启动盘</h3><p>这里使用 Ventory 的原因有：Ventory 支持多 iso 直接启动，也就意味着不像传统的 iso 文件刻录进 U 盘，可以充分利用 U 盘空间，制作双系统以及多系统系统启动盘，安装盘。</p>
+<p>当然这里也可以使用另外一款开源 U 盘刻录软件<a href="https://rufus.ie/">Rufus</a></p>
+<h3 id="确认主板-bios-模式为传统-bios-或是-UEFI-模式"><a href="#确认主板-bios-模式为传统-bios-或是-UEFI-模式" class="headerlink" title="确认主板 bios 模式为传统 bios 或是 UEFI 模式"></a>确认主板 bios 模式为传统 bios 或是 UEFI 模式</h3><p>虽是这么说 Linux 能让老电脑焕发第二春，但是对于那种都已经腐烂的电脑，真的还是不推荐安装此系统，毕竟我们安装 Arch Linux 是用来折腾的，（至少对我来说）。对于风烛残年的老电脑来说，还是让他好好休息吧，干活是年轻人的事情。</p>
+<p>现在（截止于 2021 年）市面上流通的个人电脑，我们安装系统时推荐使用主板 UEFI 模式+硬盘 GPT 模式。并且 UEFI 模式则需在主板 bios 设置中关闭安全启动这一选项。  </p>
+<p><img src="./BIOS_FASTBOOT.png" alt="BIOS_FASTBOOT"></p>
+<h3 id="进入-ArchLinux-Live-安装环境"><a href="#进入-ArchLinux-Live-安装环境" class="headerlink" title="进入 ArchLinux Live 安装环境"></a>进入 ArchLinux Live 安装环境</h3><p>这个就比较简单了，选择主板 bios 的启动选项的快捷键还是进如主板 bios 设置修改启动顺序，这些随你的心情，只要选择用 Ventory 制作好的Ｕ盘启动盘就行了。</p>
+<p>进入 U 盘后，选择相应的 Arch Linux 镜像，等待跑码，跑码结束后就是进入命令行输入模式了。</p>
+<h2 id="配置-Live-CD-环境"><a href="#配置-Live-CD-环境" class="headerlink" title="配置 Live CD 环境"></a>配置 Live CD 环境</h2><blockquote>
+<p>注意，每条命令，我会做出或多或少的相关解释。<br>而且请注意，我们进入 Live 环境后，是以 root 权限进行操作。<br>所以做出以下约定：<br>以#开头的命令，需以 root 权限运行<br>以%开头的命令，需以普通用户权限运行</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Arch Linux的安装需要网络环境，第一步就是连接互联网，这里采用有线网络连接计算机，若想使用无线网络连接计算机，等我慢慢写吧。。。网上都有</span><br><span class="line">dhcpcd</span><br><span class="line"></span><br><span class="line"># 校准本地时间</span><br><span class="line">timedatectl set-ntp true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="对磁盘进行分区和挂载操作"><a href="#对磁盘进行分区和挂载操作" class="headerlink" title="对磁盘进行分区和挂载操作"></a>对磁盘进行分区和挂载操作</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># 查看磁盘及其分区情况</span><br><span class="line">lsblk</span><br><span class="line"></span><br><span class="line"># 使用&#x27;cgdisk&#x27;命令对相关磁盘进行分区（请自选对应磁盘）</span><br><span class="line">cgdisk /dev/nvme0n1</span><br><span class="line"></span><br><span class="line"># 再次查看磁盘及其分区情况</span><br><span class="line">lsblk -f</span><br><span class="line"></span><br><span class="line"># 确定好磁盘分区，开始对分区进行格式化</span><br><span class="line">我们对 /dev/nvme0n1p1 格式化为vfat文件系统</span><br><span class="line">我们对 /dev/nvme0n1p2 格式化为交换分区</span><br><span class="line">我们对 /dev/nvme0n1p3 格式化为xfs文件系统</span><br><span class="line">我们对 /dev/nvme0n1p4 格式化为xfs文件系统</span><br><span class="line"></span><br><span class="line">mkfs.vfat /dev/nvme0n1p1</span><br><span class="line">mkswap /dev/nvme0n1p2</span><br><span class="line">mkfs.xfs /dev/nvme0n1p3</span><br><span class="line">mkfs.xfs /dev/nvme0n1p4</span><br><span class="line"></span><br><span class="line"># 最后检查磁盘分区，确认分区完毕</span><br><span class="line">lsblk -f</span><br><span class="line"></span><br><span class="line"># 挂载磁盘到 Live CD 内存中</span><br><span class="line">mount /dev/mvne0n1p3 /mnt</span><br><span class="line"></span><br><span class="line"># 建立boot，home挂载点</span><br><span class="line">mkdir /mnt/boot &amp; mkdir /mnt/home</span><br><span class="line"></span><br><span class="line"># 挂载磁盘相关分区到boot，home文件夹中</span><br><span class="line">mount /dev/nvme0n1p1 /mnt/boot &amp; mount /dev/nvme0n1p4 /mnt/home</span><br><span class="line"></span><br><span class="line"># 挂载交换分区</span><br><span class="line">swapon /dev/nvme0n1p2</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-Linux-内核以及必须的软件包和元软件包"><a href="#安装-Linux-内核以及必须的软件包和元软件包" class="headerlink" title="安装 Linux 内核以及必须的软件包和元软件包"></a>安装 Linux 内核以及必须的<a href="https://wiki.archlinux.org/title/Meta_package_and_package_group_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">软件包和元软件包</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 base 元软件包、base-devel软件包组、 Linux 内核以及常规硬件的固件</span><br><span class="line">和有线/无线网络工具，Btrfs、VFAT、exFAT、ext、NTFS、XFS文件系统管理工具</span><br><span class="line"></span><br><span class="line">pacstrap /mnt base base-devel linux linux-firmware dhcpcd iwd btrfs-progs dosfstools exfat-utils e2fsprogs ntfs-3g xfsprogs gdisk </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="初步配置已安装系统"><a href="#初步配置已安装系统" class="headerlink" title="初步配置已安装系统"></a>初步配置已安装系统</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># 配置fstab文件</span><br><span class="line">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span><br><span class="line"></span><br><span class="line"># Change root</span><br><span class="line">arch-chroot /mnt</span><br><span class="line"></span><br><span class="line"># 安装文本编辑器nano、vim</span><br><span class="line">访问 man 和 info 页面的工具</span><br><span class="line">联网所需要的程序</span><br><span class="line">pacman -S nano vim man-db man-pages dialog wpa_supplicant networkmanager netctl</span><br><span class="line"></span><br><span class="line"># 设置时区为上海时区</span><br><span class="line">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line"># 设置时间标准为 UTC 并调整时间偏移</span><br><span class="line">hwclock --systohc --utc</span><br><span class="line"></span><br><span class="line"># 本地化过程1</span><br><span class="line">vim /etc/locale.gen</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">删除对应地区和编码格式前的#号</span><br><span class="line"></span><br><span class="line"># 更新所做出的更改</span><br><span class="line">locale-gen</span><br><span class="line"></span><br><span class="line"># 本地化过程2</span><br><span class="line">vim /etc/locale.conf</span><br><span class="line">- - - - - - - - - -  - - - - - - </span><br><span class="line">在locale.conf中添加如下文本</span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line">LC_ALL=C</span><br><span class="line"></span><br><span class="line"># 设置主机名（替换myhostname）</span><br><span class="line">vim /etc/hostname</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">在locale.conf中添加如下文本</span><br><span class="line">myhostname</span><br><span class="line"></span><br><span class="line"># 设置hosts文件（替换myhostname）</span><br><span class="line">vim /etc/hosts</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">在hosts中添加如下文本</span><br><span class="line">127.0.0.1	localhost</span><br><span class="line">::1		localhost</span><br><span class="line">127.0.1.1	myhostname.localdomain	myhostname</span><br><span class="line"></span><br><span class="line"># 修改root密码</span><br><span class="line">passwd</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装和配置引导程序"><a href="#安装和配置引导程序" class="headerlink" title="安装和配置引导程序"></a>安装和配置引导程序</h2><p>关于 GRUB 的2.06更新的一点改变：</p>
+<blockquote>
+<ol>
+<li>如果您正在使用 os-prober 生成其他系统的引导项，grub 2.06 不再自动启用 os-prober，您需要添加 GRUB_DISABLE_OS_PROBER=false 至 /etc/default/grub 配置文件中并且重新运行 grub-mkconfig</li>
+<li>grub 2.06 现在会自动添加 固件设置菜单（ BIOS ） 引导项目，无需手动创建</li>
+</ol>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装CPU微码（根据具体CPU品牌进行选择）</span><br><span class="line">pacman -S amd-ucode</span><br><span class="line">pacman -S intel-ucode</span><br><span class="line"></span><br><span class="line"># 安装多系统工具 os-prober 和EFI启动管理工具</span><br><span class="line">pacman -S os-prober efibootmgr</span><br><span class="line"></span><br><span class="line"># 安装启动引导程序 gurb2</span><br><span class="line">pacman -S grub</span><br><span class="line"></span><br><span class="line"># 禁用 grub 的禁用 os-prober 功能</span><br><span class="line">vim /etc/default/grub </span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">添加如下文本</span><br><span class="line">GRUB_DISABLE_OS_PROBER=false</span><br><span class="line"></span><br><span class="line"># 配置 grub （此为 grub 在UEFI模式下的配置）</span><br><span class="line">grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck</span><br><span class="line">grub-install --target=x86_64-efi --efi-directory=/boot  --recheck</span><br><span class="line"></span><br><span class="line"># 更新并储存 grub 配置</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line"></span><br><span class="line"># 退出磁盘系统下的 root 用户</span><br><span class="line">exit</span><br><span class="line"></span><br><span class="line"># 卸载挂载点</span><br><span class="line">umount -R /mnt</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>到此位置我们已经完成安装了 Arch Linux 的安装。  </p>
+<p>那么，接下来，我们要开始对完善我们所安装的系统。</p>
+<p><em>有时候，因为 Windows Boot Manager （Windows系统启动管理器）的强势性，即使在正确配置好了启动引导程序后，可能也不会自动引导进 GRUB 中。所以有时候我们还需在主板 BIOS 设置中，在 启动 选项中选择磁盘中已经安装并配置好的 grub 的引导程序并保存。</em>  </p>
+<h2 id="完善已安装的系统"><a href="#完善已安装的系统" class="headerlink" title="完善已安装的系统"></a>完善已安装的系统</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; 配置桌面环境</span><br><span class="line"># 安装软件包组 xorg </span><br><span class="line">pacman -S xorg</span><br><span class="line"></span><br><span class="line"># 安装 wayland</span><br><span class="line">pacman -S wayland</span><br><span class="line"></span><br><span class="line"># 安装显示管理器 SDDM</span><br><span class="line">pacman -S sddm</span><br><span class="line"></span><br><span class="line"># 安装 Plasma 桌面、 KDE 应用和 Wayland 的KDE支持</span><br><span class="line">pacman -S plasma kde-applications plasma-wayland-session</span><br><span class="line"></span><br><span class="line"># 设置相关服务开机自启</span><br><span class="line">禁用系统自带的网络服务</span><br><span class="line">systemctl disable netctl</span><br><span class="line">启用显示管理器 SDDM</span><br><span class="line">systemctl enable sddm</span><br><span class="line">启动桌面环境用的网络管理</span><br><span class="line">systemctl enable NetworkManager</span><br><span class="line"></span><br><span class="line">&gt; 配置 Nvidia 显卡驱动(如果你有N卡的话，而且在显卡型号不会太老的情况)</span><br><span class="line"># pacman -S nvidia nvidia-utils nvidia-settings</span><br><span class="line"># nvidia-xconfig</span><br><span class="line"></span><br><span class="line"># 完成配置，重启</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line">&gt; 设置 sudo 并添加新用户</span><br><span class="line"># 替换 vi 编辑器 为 vim </span><br><span class="line">ln -s /usr/bin/vim /usr/bin/vi</span><br><span class="line"></span><br><span class="line"># visudo</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">找到该行，去掉 %wheel 前的注释符号 # （百分号保留）</span><br><span class="line">  ## Uncomment to allow members of group wheel to execute any command</span><br><span class="line">  # %wheel ALL=(ALL) ALL</span><br><span class="line"></span><br><span class="line"># 添加新用户并加进wheel用户组 （替换sunshine为你喜欢的用户名）</span><br><span class="line">useradd -m -G wheel sunshine</span><br><span class="line"></span><br><span class="line"># 为 sunshine 设置密码</span><br><span class="line">passwd sunshine</span><br><span class="line"></span><br><span class="line"># 切换到个人所创建的用户,并且以后默认使用该用户进行系统操作</span><br><span class="line">su sunshine</span><br><span class="line"></span><br><span class="line">&gt; 配置蓝牙并自启动蓝牙服务</span><br><span class="line"># pacman -S bluez bluez-utils</span><br><span class="line"># systemctl enable bluetooth.service</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 本地化过程3</span><br><span class="line">$ 安装中文字体(注意这里已经使用普通用户了)</span><br><span class="line">Google Noto Fonts 系列</span><br><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br><span class="line">思源黑体</span><br><span class="line">sudo pacman -S adobe-source-han-sans-otc-fonts</span><br><span class="line">文泉驿正黑和微米黑</span><br><span class="line">sudo pacman -S wqy-zenhei wqy-microhei</span><br><span class="line">更纱黑体</span><br><span class="line">sudo pacman -S ttf-sarasa-gothic</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 安装版本控制工具 Git 和第三方软件包管理器 yay</span><br><span class="line">$ sudo pacman -S git</span><br><span class="line">$ mkdir ~/builds &amp; cd ~/builds</span><br><span class="line">$ git clone https://aur.archlinux.org/yay.git</span><br><span class="line">$ cd yay</span><br><span class="line">$ makepkg -si</span><br><span class="line"></span><br><span class="line">&gt; 安装并使用 Z shell(zsh) 和第三方zsh框架 oh my zsh</span><br><span class="line">$ yay -S zsh</span><br><span class="line"></span><br><span class="line">$ 初始配置 zsh 获取配置文件</span><br><span class="line">zsh </span><br><span class="line"></span><br><span class="line">$ 列出已安装的 shell 路径</span><br><span class="line">chsh -l</span><br><span class="line"></span><br><span class="line">$ 若要改变默认 shell ,改变以下 shell 路径即可</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line">$ 执行官方安装 oh my zsh 脚本(oh my zsh 会自动更新,无需担心后续的版本更新问题)</span><br><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br><span class="line"></span><br><span class="line">$ 在桌面环境下使用我个人比较喜欢的 Agnoster 主题 （终端环境我推荐使用 ys 主题）</span><br><span class="line">vim ~/.zshrc</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">修改配置为</span><br><span class="line">ZSH_THEME=&quot;agnoster&quot;</span><br><span class="line"></span><br><span class="line">$ 立即更新配置</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br><span class="line">&gt; 安装和配置中文输入法 fcitx5</span><br><span class="line">$ 安装软件包 fcitx5</span><br><span class="line">yay -S fcitx5</span><br><span class="line"></span><br><span class="line">$ 安装输入法引擎 rime</span><br><span class="line">yay -S fcitx5-rime</span><br><span class="line"></span><br><span class="line">$ 安装对 Qt 和 GTK 程序的支持输入法模块</span><br><span class="line">yay -S fcitx5-qt fcitx5-gtk</span><br><span class="line"></span><br><span class="line">$ 配置环境变量</span><br><span class="line">vim ~/.pam_environment</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">添加如下文本后并重新登录</span><br><span class="line">GTK_IM_MODULE DEFAULT=fcitx</span><br><span class="line">QT_IM_MODULE  DEFAULT=fcitx</span><br><span class="line">XMODIFIERS    DEFAULT=@im=fcitx</span><br><span class="line">SDL_IM_MODULE DEFAULT=fcitx</span><br><span class="line"></span><br><span class="line">$ 安装适用于 Rime 的中文维基词库</span><br><span class="line">yay -S fcitx5-pinyin-zhwiki-rime</span><br><span class="line"></span><br><span class="line">$ 安装炫酷的 material 主题</span><br><span class="line">yay -S fcitx5-material-color</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="TO-BE-CONTINUED"><a href="#TO-BE-CONTINUED" class="headerlink" title="TO BE CONTINUED"></a>TO BE CONTINUED</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S mlocate</span><br><span class="line">sudo updatedb</span><br><span class="line">yay -S visual-studio-code-bin libdbusmenu-glib gnome-keyring</span><br><span class="line">yay -S google-chrome onedrive-abraunegg</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/pacman.conf</span><br><span class="line">yay -S android-sdk android-sdk-platform-tools android-sdk-build-tools libmtp aosp-devel</span><br><span class="line">groupadd sdkusers</span><br><span class="line">gpasswd -a &lt;user&gt; sdkusers</span><br><span class="line">chown -R :sdkusers /opt/android-sdk</span><br><span class="line">chmod -R g+w /opt/android-sdk</span><br><span class="line">newgrp sdkusers</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S nodejs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>提纲</title>
+    <url>/2021/08/20/%E6%8F%90%E7%BA%B2/</url>
+    <content><![CDATA[<h1 id="openwrt-系统简介"><a href="#openwrt-系统简介" class="headerlink" title="openwrt 系统简介"></a>openwrt 系统简介</h1><p>Linksys 公司在2002年底推出的一款无线路由器 WRT-54G ，该路由器的固件不开源，但是由于该路由器使用了遵守 GPL 许可证的源代码，Linksys 于2003年7月迫于多方压力开源了 WRT-54G 无线路由器的固件。这便是 openwrt 系统的前身。  </p>
+<p>openwrt 是一个基于 linux 内核的开源社区发行版。因为其前身是商业公司的无线路由器系统，这使得 openwrt 先天性的拥有商业公司的代码部分，能够被开源社区学习和参考。经过近17年的发展，openwrt 已经成为最流行的开源路由器系统。他的诞生也带来了软路由这一新概念和广阔的蓝海市场。  </p>
+<h1 id="NAS（Network-Attached-Storage-网络附加储存）简介"><a href="#NAS（Network-Attached-Storage-网络附加储存）简介" class="headerlink" title="NAS（Network Attached Storage 网络附加储存）简介"></a>NAS（Network Attached Storage 网络附加储存）简介</h1><p>现在我们提到的 nas ，由两个部分组成：nas 系统和可以运行 nas 系统的 nas 硬件。nas 的主要功能就是为其连接上的网络的其他计算机提供集中的文件储存功能。在此基础上，nas 还扩展出了 RAID（磁盘阵列） 的功能以便提升性能或资料冗余，或是两者同时提升。nas 的出现解决了人们对多主机文件管理的需求，集中式的文件服务器可以为多平台的主机服务，且便于维护，优化局域网的网络主机结构。  </p>
+<h1 id="openwrt-编译、安装、和使用"><a href="#openwrt-编译、安装、和使用" class="headerlink" title="openwrt 编译、安装、和使用"></a>openwrt 编译、安装、和使用</h1><p>openwrt 经过多年的发展，支持的 cpu 架构也越来越多。正应如此，要获得一个可刷写的 openwrt 固件，需要获取 openwrt 的源代码并进行对其编译。通过修改编译配置文件，可以获得适合自己需求的 openwrt 固件。openwrt 的 Web 管理界面采用 LUCI ，在编译中也可以将多种 LUCI 的组件编译进固件，openwrt 中的各种 LUCI 组件提供了一个可视化的功能 Web 管理模式。这也是 openwrt 流行的一个重要原因 — 友好的 Web 管理模式。  </p>
+<p>编译完成 openwrt 源代码后，可以得到其 img 镜像文件。将 img 文件刷入对应 cpu 架构的主机中即可完成 openwrt 系统的安装。若要访问 openwrt 的 Web 管理界面，使用另一主机连接网线，通过浏览器访问 openwrt 在编译过程中所连接网线指定的 IP 地址（一般为192.168.1.1)，即可出现 Web 管理界面。输入默认用户名和密码后，即可通过 web 界面管理 openwrt 系统。  </p>
+<h1 id="软路由简介"><a href="#软路由简介" class="headerlink" title="软路由简介"></a>软路由简介</h1><p>软路由的概念是随着 openwrt 系统的不断发展完善，搭载 openwrt 系统的主机渐渐能够媲美由传统网络通讯厂商所推出的定制硬件搭配定制系统的传统路由器，这些厂商的产品渐渐就被大家称为硬路由。相对的，由用户自己搭配硬件，根据硬件编译适配 openwrt 系统并刷入的主机，就叫做软路由。  </p>
+<p>软路由的优势在于其 openwrt 系统的底层 linux 内核基本和上游官方 linux 内核保持同步，拥有活跃的开发者社区和 linux 的丰富软件包。软路由可以做到许多传统路由做不到的许多额外功能，例如搭建各种各样协议 vpn 服务器、使用许多域名提供商的 ddns 服务，甚至轻松实现传统路由器的难以实现的许多 linux 服务器才能实现的功能如搭建虚拟机、配置网络文件共享等等。<br>软路由仍然有许多进步的空间，比如在稳定性方面的上如果使用者经验不正确的进行配置的话，那么软路由的稳定性还是要弱于拥有多年专门研究定制硬件、定制系统的传统网络通讯厂商的路由器的。又或者说软路由在无线连接方面因为组成软路由的硬件大多数在无线网卡上面区别很大，在无线连接的速度，稳定性方面还是弱于定制硬件、定制系统的传统路由器。  </p>
+<h1 id="本项目简介"><a href="#本项目简介" class="headerlink" title="本项目简介"></a>本项目简介</h1><p>nas 在个人家庭场景下的使用近年来是越来越兴盛，但是也正如传统和创新的路由市场。nas 市场也是有众多品牌 nas ，他们也有着自己的独立封闭的定制硬件、定制系统的 nas 。当然市场上也流行着用户自己搭配硬件的，运行开源 nas 系统的主机，就如个人的路由市场一样。而本项目的目的就是，选择利用一款流行的主机，使用 openwrt 系统在一台设备上搭建家庭网络节点，实现上网功能和使用其他丰富的网络工具，同时利用 openwrt 所提供的软件包和 LUCI 组件，实现 nas 的基本功能，这样使用一台设备，节约开销的同时，带领大家初识开源社区的魅力，了解现在的网络设备新功能。开阔大家的视野和提升个人的计算机能力。</p>
+]]></content>
+      <tags>
+        <tag>树莓派</tag>
+      </tags>
+  </entry>
+</search>
