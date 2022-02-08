@@ -1,95 +1,349 @@
 <!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>(施工中)Arch Linux个人安装步骤小记 | Sunshine_Planet&#39; s BLOG</title>
+    
+    
+        <meta name="keywords" content="Linux,使用小计" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="前言Arch Linux为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~ Arch Linux 的官方 Wiki 上推荐使用 Live 系统安装 Arch Linux，我也在使用 Arch 的过程中，虽然也了解了那些一键安装脚本，但是。。。 毕竟都用 Arch 了，就要做好折腾的觉悟好吧那么就让我们开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(施工中)Arch Linux个人安装步骤小记">
+<meta property="og:url" content="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Sunshine_Planet&#39; s BLOG">
+<meta property="og:description" content="前言Arch Linux为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~ Arch Linux 的官方 Wiki 上推荐使用 Live 系统安装 Arch Linux，我也在使用 Arch 的过程中，虽然也了解了那些一键安装脚本，但是。。。 毕竟都用 Arch 了，就要做好折腾的觉悟好吧那么就让我们开">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/BIOS_FASTBOOT.png">
+<meta property="article:published_time" content="2021-02-24T15:04:42.000Z">
+<meta property="article:modified_time" content="2022-02-08T14:18:38.803Z">
+<meta property="article:author" content="Sunshine_Planet">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="使用小计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/BIOS_FASTBOOT.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Sunshine_Planet&#39; s BLOG" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/logo.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
 
-<html lang="zh-CN">
-  
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    <head>
-      <meta charset="utf-8" />
-       
-      <meta name="keywords" content="赛先生 德先生" />
-       
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>(施工中)Arch Linux个人安装步骤小记 |  Sunshine_Planet&#39; s BLOG</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/logo.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
-      />
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-       
- 
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
 
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
-        }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Sunshine_Planet' s BLOG" type="application/atom+xml">
-</head>
-  </html>
-</html>
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
 
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.0.0"></head>
 
 <body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-Arch-Linux个人安装步骤小记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  (施工中)Arch Linux个人安装步骤小记
-</h1>
- 
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Sunshine_Planet&#39; s BLOG</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+                    <a class="main-nav-link" href="/creating">创造中</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
 
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/" class="article-date">
-  <time datetime="2021-02-24T15:04:42.000Z" itemprop="datePublished">2021-02-24</time>
-</a>  
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-      
-    <div class="tocbot"></div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
 
 
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                    <td><a class="main-nav-link" href="/creating">创造中</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Linux
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            OpenWRT
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/08/20/%E6%8F%90%E7%BA%B2/">提纲</a></li>  <li class="file"><a href="/2022/02/05/OpenWRT-%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/">OpenWRT 挂载硬盘并设置网络共享</a></li>  </ul> 
+                    </li> 
+                     <li class="file active"><a href="/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/">(施工中)Arch Linux个人安装步骤小记</a></li>  <li class="file"><a href="/2021/12/09/Linux-Windows-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB-%E5%8C%85%E6%8B%AC%E8%93%9D%E7%89%99-LE-%E8%AE%BE%E5%A4%87/">Linux & Windows 双系统蓝牙设备共享(包括蓝牙 LE 设备)</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            路由器
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            华硕
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/01/26/Udpspeeder%E5%8A%A0Udp2raw%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF/">Udpspeeder加Udp2raw个人使用模板</a></li>  <li class="file"><a href="/2021/01/26/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/">ML的时候,软件中心提示非法?</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/2021/01/26/about/">About Me</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-Arch-Linux个人安装步骤小记" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-link-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%A1/" rel="tag">使用小计</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/">
+            <time datetime="2021-02-24T15:04:42.000Z" itemprop="datePublished">2021-02-24</time>
+        </a>
+    </div>
 
 
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Arch_Linux">Arch Linux</a>为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~</strong></p>
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            (施工中)Arch Linux个人安装步骤小记
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Arch_Linux">Arch Linux</a>为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~</strong></p>
 <p><strong>Arch Linux 的官方 Wiki 上推荐使用 Live 系统安装 Arch Linux，我也在使用 Arch 的过程中，虽然也了解了那些一键安装脚本，但是。。。</strong></p>
 <h2 id="毕竟都用-Arch-了，就要做好折腾的觉悟好吧"><a href="#毕竟都用-Arch-了，就要做好折腾的觉悟好吧" class="headerlink" title="毕竟都用 Arch 了，就要做好折腾的觉悟好吧"></a><del>毕竟都用 Arch 了，就要做好折腾的觉悟好吧</del></h2><p><em>那么就让我们开始吧！</em></p>
 <h2 id="官方-Wiki-的安装过程"><a href="#官方-Wiki-的安装过程" class="headerlink" title="官方 Wiki 的安装过程"></a><strong>官方 Wiki 的安装过程</strong></h2><ul>
@@ -115,7 +369,7 @@
 <p>当然这里也可以使用另外一款开源 U 盘刻录软件<a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a></p>
 <h3 id="确认主板-bios-模式为传统-bios-或是-UEFI-模式"><a href="#确认主板-bios-模式为传统-bios-或是-UEFI-模式" class="headerlink" title="确认主板 bios 模式为传统 bios 或是 UEFI 模式"></a>确认主板 bios 模式为传统 bios 或是 UEFI 模式</h3><p>虽是这么说 Linux 能让老电脑焕发第二春，但是对于那种都已经腐烂的电脑，真的还是不推荐安装此系统，毕竟我们安装 Arch Linux 是用来折腾的，（至少对我来说）。对于风烛残年的老电脑来说，还是让他好好休息吧，干活是年轻人的事情。</p>
 <p>现在（截止于 2021 年）市面上流通的个人电脑，我们安装系统时推荐使用主板 UEFI 模式+硬盘 GPT 模式。并且 UEFI 模式则需在主板 bios 设置中关闭安全启动这一选项。  </p>
-<p><img src="./BIOS_FASTBOOT.png" alt="BIOS_FASTBOOT"></p>
+<p><img src="/./BIOS_FASTBOOT.png" alt="BIOS_FASTBOOT"></p>
 <h3 id="进入-ArchLinux-Live-安装环境"><a href="#进入-ArchLinux-Live-安装环境" class="headerlink" title="进入 ArchLinux Live 安装环境"></a>进入 ArchLinux Live 安装环境</h3><p>这个就比较简单了，选择主板 bios 的启动选项的快捷键还是进如主板 bios 设置修改启动顺序，这些随你的心情，只要选择用 Ventory 制作好的Ｕ盘启动盘就行了。</p>
 <p>进入 U 盘后，选择相应的 Arch Linux 镜像，等待跑码，跑码结束后就是进入命令行输入模式了。</p>
 <h2 id="配置-Live-CD-环境"><a href="#配置-Live-CD-环境" class="headerlink" title="配置 Live CD 环境"></a>配置 Live CD 环境</h2><blockquote>
@@ -132,7 +386,7 @@
 <h2 id="安装和配置引导程序"><a href="#安装和配置引导程序" class="headerlink" title="安装和配置引导程序"></a>安装和配置引导程序</h2><p>关于 GRUB 的2.06更新的一点改变：</p>
 <blockquote>
 <ol>
-<li>如果您正在使用 os-prober 生成其他系统的引导项，grub 2.06 不再自动启用 os-prober，您需要添加 GRUB_DISABLE_OS_PROBER=false 至 /etc/default/grub 配置文件中并且重新运行 grub-mkconfig</li>
+<li>如果您正在使用 os-prober 生成其他系统的引导项，grub 2.06 不再自动启用 os-prober，您需要添加 GRUB_DISABLE_OS_PROBER&#x3D;false 至 &#x2F;etc&#x2F;default&#x2F;grub 配置文件中并且重新运行 grub-mkconfig</li>
 <li>grub 2.06 现在会自动添加 固件设置菜单（ BIOS ） 引导项目，无需手动创建</li>
 </ol>
 </blockquote>
@@ -141,7 +395,7 @@
 <p>到此位置我们已经完成安装了 Arch Linux 的安装。  </p>
 <p>那么，接下来，我们要开始对完善我们所安装的系统。</p>
 <p><em>有时候，因为 Windows Boot Manager （Windows系统启动管理器）的强势性，即使在正确配置好了启动引导程序后，可能也不会自动引导进 GRUB 中。所以有时候我们还需在主板 BIOS 设置中，在 启动 选项中选择磁盘中已经安装并配置好的 grub 的引导程序并保存。</em>  </p>
-<h2 id="完善已安装的系统"><a href="#完善已安装的系统" class="headerlink" title="完善已安装的系统"></a>完善已安装的系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">&gt; 设置 sudo 并添加新用户</span><br><span class="line"># 替换 vi 编辑器 为 vim </span><br><span class="line">ln -s /usr/bin/vim /usr/bin/vi</span><br><span class="line"></span><br><span class="line"># visudo</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">找到该行，去掉 %wheel 前的注释符号 # （百分号保留）</span><br><span class="line">  ## Uncomment to allow members of group wheel to execute any command</span><br><span class="line">  # %wheel ALL=(ALL) ALL</span><br><span class="line"></span><br><span class="line"># 添加新用户并加进wheel用户组 （替换 user 为你喜欢的用户名）</span><br><span class="line">useradd -m -G wheel user</span><br><span class="line"></span><br><span class="line"># 为 user 设置密码</span><br><span class="line">passwd user</span><br><span class="line"></span><br><span class="line"># 切换到个人所创建的用户,并且以后默认使用该用户进行系统操作</span><br><span class="line">su user</span><br><span class="line"></span><br><span class="line">&gt; 配置桌面环境</span><br><span class="line"># 安装软件包组 xorg </span><br><span class="line">pacman -S xorg</span><br><span class="line"></span><br><span class="line"># 安装 wayland 和 wayland 的 xorg 兼容</span><br><span class="line">pacman -S wayland xorg-xwayland</span><br><span class="line"># 安装各个图形库的 wayland 支持（qt5，qt6，glfw，glew）</span><br><span class="line">pacman -S qt5-wayland qt6-wayland glfw-wayland glew-wayland </span><br><span class="line"></span><br><span class="line"># 安装显示管理器 SDDM</span><br><span class="line">pacman -S sddm</span><br><span class="line"># SDDM 若要强制启动小键盘</span><br><span class="line">vim /etc/sddm.conf.d/</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">修改 Numlock 为 on（选项有 on off none）</span><br><span class="line">[General]</span><br><span class="line">Numlock=on</span><br><span class="line"></span><br><span class="line">// SDDM 不会显示 root 用户的登录界面，所以要在使用 SDDM 之前创建一个非 root 用户</span><br><span class="line"></span><br><span class="line"># 安装 Plasma 桌面、 KDE 应用和 Wayland 的KDE支持</span><br><span class="line">pacman -S plasma kde-applications plasma-wayland-session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 设置相关服务开机自启</span><br><span class="line">禁用系统自带的网络服务</span><br><span class="line">systemctl disable netctl</span><br><span class="line">启用显示管理器 SDDM</span><br><span class="line">systemctl enable sddm</span><br><span class="line">启动桌面环境用的网络管理</span><br><span class="line">systemctl enable NetworkManager</span><br><span class="line"></span><br><span class="line">&gt; 配置 Nvidia 显卡驱动(如果你有N卡的话，而且在显卡型号不会太老的情况)</span><br><span class="line"># pacman -S nvidia nvidia-utils nvidia-settings</span><br><span class="line"></span><br><span class="line"># 要在 wayland 下使用 Nvidia 显卡，需要给 Linux 内核传递 Nvidia 的 Direct Rendering Manager Kernel Mode 参数（不然就黑屏了）</span><br><span class="line">sudo vim /etc/default/grub</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">在该行的参数内添加 nvidia-drm.modeset=1 如下</span><br><span class="line">- GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash&quot;</span><br><span class="line">+ GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash nvidia-drm.modeset=1&quot;</span><br><span class="line"></span><br><span class="line"># 重新生成 grub.cfg 文件</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line"></span><br><span class="line"># 完成配置，重启</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 配置蓝牙并自启动蓝牙服务</span><br><span class="line"># pacman -S bluez bluez-utils</span><br><span class="line"># systemctl enable bluetooth.service</span><br><span class="line"># vim /etc/bluetooth/main.conf</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">若要蓝牙开机后自动启动，false 修改为 true，如下</span><br><span class="line">[Policy]</span><br><span class="line">- # AutoEnable=false</span><br><span class="line">+ AutoEnable=true</span><br><span class="line"></span><br><span class="line">&gt; 安装版本控制工具 Git 和第三方软件包管理器 yay</span><br><span class="line">$ sudo pacman -S git</span><br><span class="line">$ mkdir ~/builds &amp; cd ~/builds</span><br><span class="line">$ git clone https://aur.archlinux.org/yay.git</span><br><span class="line">$ cd yay</span><br><span class="line">$ makepkg -si</span><br><span class="line"></span><br><span class="line">&gt; 本地化过程3</span><br><span class="line">$ 安装中文字体(注意这里已经使用普通用户了)</span><br><span class="line">Google Noto Fonts 系列</span><br><span class="line">yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br><span class="line">思源黑体</span><br><span class="line">yay -S adobe-source-han-sans-otc-fonts</span><br><span class="line">文泉驿正黑和微米黑</span><br><span class="line">yay -S wqy-zenhei wqy-microhei</span><br><span class="line">更纱黑体</span><br><span class="line">yay -S ttf-sarasa-gothic</span><br><span class="line"></span><br><span class="line">&gt; 安装并使用 Z shell(zsh) 和第三方zsh框架 oh my zsh</span><br><span class="line">$ yay -S zsh</span><br><span class="line"></span><br><span class="line">$ 初始配置 zsh 获取配置文件</span><br><span class="line">zsh </span><br><span class="line"></span><br><span class="line">$ 列出已安装的 shell 路径</span><br><span class="line">chsh -l</span><br><span class="line"></span><br><span class="line">$ 若要改变默认 shell ,改变以下 shell 路径即可</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line">$ 执行官方安装 oh my zsh 脚本(oh my zsh 会自动更新,无需担心后续的版本更新问题)</span><br><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br><span class="line"></span><br><span class="line">$ 在桌面环境下使用我个人比较喜欢的 Agnoster 主题 （终端环境我推荐使用 ys 主题）</span><br><span class="line">vim ~/.zshrc</span><br><span class="line">- - - - - - - - - - - - - - - -</span><br><span class="line">修改配置为</span><br><span class="line">ZSH_THEME=&quot;agnoster&quot;</span><br><span class="line"></span><br><span class="line">$ 立即更新配置</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br><span class="line">&gt; 安装和配置中文输入法 fcitx5</span><br><span class="line">$ 安装软件包 fcitx5</span><br><span class="line">yay -S fcitx5</span><br><span class="line"></span><br><span class="line">$ 安装输入法引擎 rime</span><br><span class="line">yay -S fcitx5-rime</span><br><span class="line"></span><br><span class="line">$ 安装对 Qt 和 GTK 程序的支持输入法模块</span><br><span class="line">yay -S fcitx5-qt fcitx5-gtk</span><br><span class="line"></span><br><span class="line"># 配置环境变量</span><br><span class="line"></span><br><span class="line">vim /etc/environment</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">添加如下文本后并重新登录(注销用户)</span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">GLFW_IM_MODULE=fcitx </span><br><span class="line">SDL_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line"></span><br><span class="line">//使用 ~/.pam_environment 配置的环境变量，现已不再推荐使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ 安装适用于 Rime 的中文维基词库</span><br><span class="line">yay -S fcitx5-pinyin-zhwiki-rime</span><br><span class="line"></span><br><span class="line">$ 安装炫酷的 material 主题</span><br><span class="line">yay -S fcitx5-material-color</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">从 KDE 桌面程序启动器进入 fcitx5 的配置菜单：</span><br><span class="line">主题选择</span><br><span class="line">  Fcitx5 - 附加组件 - 经典用户界面 </span><br><span class="line">另外在 Fcitx5 - 中州韻 中可以配置输入法的外观，可以根据自己选择勾选</span><br><span class="line">  []同时在程序中显示预编辑文本编辑</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="完善已安装的系统"><a href="#完善已安装的系统" class="headerlink" title="完善已安装的系统"></a>完善已安装的系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line">&gt; 设置 sudo 并添加新用户</span><br><span class="line"># 替换 vi 编辑器 为 vim </span><br><span class="line">ln -s /usr/bin/vim /usr/bin/vi</span><br><span class="line"></span><br><span class="line"># visudo</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">找到该行，去掉 %wheel 前的注释符号 # （百分号保留）</span><br><span class="line">  ## Uncomment to allow members of group wheel to execute any command</span><br><span class="line">  # %wheel ALL=(ALL) ALL</span><br><span class="line"></span><br><span class="line"># 添加新用户并加进wheel用户组 （替换 user 为你喜欢的用户名）</span><br><span class="line">useradd -m -G wheel user</span><br><span class="line"></span><br><span class="line"># 为 user 设置密码</span><br><span class="line">passwd user</span><br><span class="line"></span><br><span class="line"># 切换到个人所创建的用户,并且以后默认使用该用户进行系统操作</span><br><span class="line">su user</span><br><span class="line"></span><br><span class="line">&gt; 配置桌面环境</span><br><span class="line"># 安装软件包组 xorg </span><br><span class="line">pacman -S xorg</span><br><span class="line"></span><br><span class="line"># 安装 wayland 和 wayland 的 xorg 兼容</span><br><span class="line">pacman -S wayland xorg-xwayland</span><br><span class="line"># 安装各个图形库的 wayland 支持（qt5，qt6，glfw，glew）</span><br><span class="line">pacman -S qt5-wayland qt6-wayland glfw-wayland glew-wayland </span><br><span class="line"></span><br><span class="line"># 安装显示管理器 SDDM</span><br><span class="line">pacman -S sddm</span><br><span class="line"># SDDM 若要强制启动小键盘</span><br><span class="line">vim /etc/sddm.conf.d/</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">修改 Numlock 为 on（选项有 on off none）</span><br><span class="line">[General]</span><br><span class="line">Numlock=on</span><br><span class="line"></span><br><span class="line">// SDDM 不会显示 root 用户的登录界面，所以要在使用 SDDM 之前创建一个非 root 用户</span><br><span class="line"></span><br><span class="line"># 安装 Plasma 桌面、 KDE 应用和 Wayland 的KDE支持</span><br><span class="line">pacman -S plasma kde-applications plasma-wayland-session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 设置相关服务开机自启</span><br><span class="line">禁用系统自带的网络服务</span><br><span class="line">systemctl disable netctl</span><br><span class="line">启用显示管理器 SDDM</span><br><span class="line">systemctl enable sddm</span><br><span class="line">启动桌面环境用的网络管理</span><br><span class="line">systemctl enable NetworkManager</span><br><span class="line"></span><br><span class="line">&gt; 配置 Nvidia 显卡驱动(如果你有N卡的话，而且在显卡型号不会太老的情况)</span><br><span class="line"># pacman -S nvidia nvidia-utils nvidia-settings</span><br><span class="line"></span><br><span class="line">cat /sys/module/nvidia_drm/parameters/modeset</span><br><span class="line">vim /etc/mkinitcpio.conf</span><br><span class="line">- MODULES=()</span><br><span class="line">+ MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)</span><br><span class="line"></span><br><span class="line"># 要在 wayland 下使用 Nvidia 显卡，需要给 Linux 内核传递 Nvidia 的 Direct Rendering Manager Kernel Mode 参数（不然就黑屏了）</span><br><span class="line">sudo vim /etc/default/grub</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">在该行的参数内添加 nvidia-drm.modeset=1 如下</span><br><span class="line">- GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash&quot;</span><br><span class="line">+ GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash nvidia-drm.modeset=1&quot;</span><br><span class="line"></span><br><span class="line"># 重新生成 grub.cfg 文件</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line"></span><br><span class="line"># 完成配置，重启</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 配置蓝牙并自启动蓝牙服务</span><br><span class="line"># pacman -S bluez bluez-utils</span><br><span class="line"># systemctl enable bluetooth.service</span><br><span class="line"># vim /etc/bluetooth/main.conf</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">若要蓝牙开机后自动启动，false 修改为 true，如下</span><br><span class="line">[Policy]</span><br><span class="line">- # AutoEnable=false</span><br><span class="line">+ AutoEnable=true</span><br><span class="line"></span><br><span class="line">&gt; 安装版本控制工具 Git 和第三方软件包管理器 yay</span><br><span class="line">$ sudo pacman -S git</span><br><span class="line">$ mkdir ~/builds &amp; cd ~/builds</span><br><span class="line">$ git clone https://aur.archlinux.org/yay.git</span><br><span class="line">$ cd yay</span><br><span class="line">$ makepkg -si</span><br><span class="line"></span><br><span class="line">&gt; 本地化过程3</span><br><span class="line">$ 安装中文字体(注意这里已经使用普通用户了)</span><br><span class="line">Google Noto Fonts 系列</span><br><span class="line">yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br><span class="line">思源黑体</span><br><span class="line">yay -S adobe-source-han-sans-otc-fonts</span><br><span class="line">文泉驿正黑和微米黑</span><br><span class="line">yay -S wqy-zenhei wqy-microhei</span><br><span class="line">更纱黑体</span><br><span class="line">yay -S ttf-sarasa-gothic</span><br><span class="line"></span><br><span class="line">&gt; 安装并使用 Z shell(zsh) 和第三方zsh框架 oh my zsh</span><br><span class="line">$ yay -S zsh</span><br><span class="line"></span><br><span class="line">$ 初始配置 zsh 获取配置文件</span><br><span class="line">zsh </span><br><span class="line"></span><br><span class="line">$ 列出已安装的 shell 路径</span><br><span class="line">chsh -l</span><br><span class="line"></span><br><span class="line">$ 若要改变默认 shell ,改变以下 shell 路径即可</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line">$ 执行官方安装 oh my zsh 脚本(oh my zsh 会自动更新,无需担心后续的版本更新问题)</span><br><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br><span class="line"></span><br><span class="line">$ 在桌面环境下使用我个人比较喜欢的 Agnoster 主题 （终端环境我推荐使用 ys 主题）</span><br><span class="line">vim ~/.zshrc</span><br><span class="line">- - - - - - - - - - - - - - - -</span><br><span class="line">修改配置为</span><br><span class="line">ZSH_THEME=&quot;agnoster&quot;</span><br><span class="line"></span><br><span class="line">$ 立即更新配置</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br><span class="line">&gt; 安装和配置中文输入法 fcitx5</span><br><span class="line">$ 安装软件包 fcitx5</span><br><span class="line">yay -S fcitx5</span><br><span class="line"></span><br><span class="line">$ 安装输入法引擎 rime</span><br><span class="line">yay -S fcitx5-rime</span><br><span class="line"></span><br><span class="line">$ 安装对 Qt 和 GTK 程序的支持输入法模块</span><br><span class="line">yay -S fcitx5-qt fcitx5-gtk</span><br><span class="line"></span><br><span class="line"># 配置环境变量</span><br><span class="line"></span><br><span class="line">vim /etc/environment</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">添加如下文本后并重新登录(注销用户)</span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">GLFW_IM_MODULE=fcitx </span><br><span class="line">SDL_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line"></span><br><span class="line">//使用 ~/.pam_environment 配置的环境变量，现已不再推荐使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ 安装适用于 Rime 的中文维基词库</span><br><span class="line">yay -S fcitx5-pinyin-zhwiki-rime</span><br><span class="line"></span><br><span class="line">$ 安装炫酷的 material 主题</span><br><span class="line">yay -S fcitx5-material-color</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">从 KDE 桌面程序启动器进入 fcitx5 的配置菜单：</span><br><span class="line">主题选择</span><br><span class="line">  Fcitx5 - 附加组件 - 经典用户界面 </span><br><span class="line">另外在 Fcitx5 - 中州韻 中可以配置输入法的外观，可以根据自己选择勾选</span><br><span class="line">  []同时在程序中显示预编辑文本编辑</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>进行到这里，系统可以说是能够正常使用的状态了。接下来是一些常用软件的安装和注意事项。  </p>
 <h1 id="个人常用软件安装和配置"><a href="#个人常用软件安装和配置" class="headerlink" title="个人常用软件安装和配置"></a>个人常用软件安装和配置</h1><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ 安装微软构建版本 Visual Studio Code 和一个 KDE 的补丁</span><br><span class="line">yay -S visual-studio-code-bin</span><br><span class="line">yay -S libdbusmenu-glib </span><br><span class="line"></span><br><span class="line">//因为 KDE 和 VScode 在密码管理方面的不兼容（截至2021-09-05），现在无法使用 GitHub 登录 VScode 。需要使用其他平台的密码管理器，现有两种方法解决此问题或是等待 VScode 或 KWallet 解决此问题。</span><br><span class="line"></span><br><span class="line">一.安装 gnome 的密码管理器，即可解决</span><br><span class="line">1.安装 gnome 密码管理器和其图形前端</span><br><span class="line">yay -S gnome-keyring seahorse</span><br><span class="line">2.添加默认密钥环时，密码与 linux 用户密码相同，这样只需在用户登录 linux 系统时输入一次密码</span><br><span class="line"></span><br><span class="line">二.使用 KeePassXC 作为 Secrets Service</span><br><span class="line">1.安装 libsecret 和 KeePassXC</span><br><span class="line">yay -S libsecret keepassxc</span><br><span class="line">2.从 KDE 桌面程序启动器启动 KeePassXC </span><br><span class="line">3.新建一个数据库，名称随意，密码自行设置</span><br><span class="line">4.群组-新建群组，名称推荐为 Secret-Service-Integration ，配置默认</span><br><span class="line">5.工具-设置-（应用程序设置）保密服务集成。勾选 在 KeepassXC 中启用 Freedesktop.org 保密服务集成 </span><br><span class="line">6.工具-设置-（应用程序设置）保密服务集成-常规-已公开的数据库群组。点击刚刚创建的数据库文件右边 管理 栏目下的铅笔图标</span><br><span class="line">7.保密服务集成-公开条目。勾选 公开此群组下的条目</span><br><span class="line">8.完成设置，现在 VScode 可正常登录 GitHub</span><br><span class="line">9.注意，使用 KeePassXC 时应保持密码数据库处于解锁状态（截至2021-09-05 本人暂无发现无其他更好的方案能与方法一一样无需额外输入密码）</span><br><span class="line"></span><br><span class="line">目前在 Wayland 环境下 VScode 仍然默认使用 XWayland ，若要原生使用 Waylang VScode 则使用命令行传递参数启动 code 即可</span><br><span class="line">code --enable-features=UseOzonePlatform --ozone-platform=wayland</span><br><span class="line"></span><br><span class="line">Arch Wiki 下的方法传递参数好像并不能启动原生 Wayland 但是仍然在这里贴出</span><br><span class="line"></span><br><span class="line">$ vim ~/.config/electron-flags.conf</span><br><span class="line">- - - - - - - - -  - - - - - - -</span><br><span class="line">添加如下文本</span><br><span class="line">--enable-features=UseOzonePlatform</span><br><span class="line">--ozone-platform=wayland</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -157,512 +411,133 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S nodejs npm</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
     </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        Share
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/2021/02/24/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2021/08/20/%E6%8F%90%E7%BA%B2/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            提纲
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/01/26/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">ML的时候,软件中心提示非法?</div>
-      </a>
-    
-  </nav>
-
-   
-<!-- valine评论 -->
-<div id="vcomments-box">
-  <div id="vcomments"></div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-    el: "#vcomments",
-    app_id: "ymqWFL5xcP94tRpkGUKxpmiW-MdYXbMMI",
-    app_key: "JHDBJ6Hd9aFRowgLMhDjCtHw",
-    path: window.location.pathname,
-    avatar: "retro",
-    placeholder: "Don't you want to write something?",
-    recordIP: true,
-  });
-  const infoEle = document.querySelector("#vcomments .info");
-  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-    infoEle.childNodes.forEach(function (item) {
-      item.parentNode.removeChild(item);
-    });
-  }
-</script>
-<style>
-  #vcomments-box {
-    padding: 5px 30px;
-  }
-
-  @media screen and (max-width: 800px) {
-    #vcomments-box {
-      padding: 5px 0px;
-    }
-  }
-
-  #vcomments-box #vcomments {
-    background-color: #fff;
-  }
-
-  .v .vlist .vcard .vh {
-    padding-right: 20px;
-  }
-
-  .v .vlist .vcard {
-    padding-left: 10px;
-  }
-</style>
-
- 
-   
-     
 </article>
 
+
+    
+<nav id="article-nav">
+    
+        <a href="/2021/08/20/%E6%8F%90%E7%BA%B2/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    提纲
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2021/01/26/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">ML的时候,软件中心提示非法?</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
 </section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2021
-        <i class="ri-heart-fill heart_icon"></i> Sunshine_Planet
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
-        <span class="division">|</span>
-        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/logo.png" alt="Sunshine_Planet&#39; s BLOG"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/2021/01/26/about/">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
         </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Sunshine_Planet &copy; 2022 
+            <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
         </div>
-
     </div>
+</footer>
 
-</div>
+        
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
 
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
 
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
             }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
-
-<!-- Katex -->
- 
-    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
-        
-    
- 
-<!-- busuanzi  -->
- 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
- 
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
 </script>
- 
-<!-- CanvasBackground -->
-
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
-  }
-</script>
-
-
-    
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
-  </div>
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
 </body>
-
 </html>
