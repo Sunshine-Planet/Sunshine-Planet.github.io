@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ML的时候,软件中心提示非法?</title>
-    <url>/wiki/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>作为一名科学上网er，在中文环境下最喜欢用的就是ASUS路由器的路由器端科学上网了。又方便、又可以对NAT下的设备进行相关的控制。  </p>
-<blockquote>
-<p>这里要感谢我们的前辈!  </p>
-</blockquote>
-<p>但是由于<em>不可抗力</em>，我们在路由器端安装小飞机的时候，会提示含有非法关键词。<br>这时候我们无奈的前辈给出了解决方法</p>
-<blockquote>
-<p>提示1： 如果提示检测到离线安装包名有非法关键词，开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380&#x2F;X7.x版本固件需要请将软件中心更新到1.4.8及以上)  </p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\tdetect_package/\t# detect_package/g&#x27; /koolshare/scripts/ks_tar_install.sh</span><br></pre></td></tr></table></figure>
-
-<p>这时候，我们就可以继续进行科学上网的相关操作了！  </p>
-<p><em>参考资料</em>  </p>
-<ul>
-<li><a href="https://github.com/hq450/fancyss">有关插件</a></li>
-<li><a href="https://koolshare.cn/forum-96-1.html">KS论坛</a></li>
-<li><a href="https://www.asuswrt-merlin.net/">ML官网</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>路由器</category>
-        <category>华硕</category>
-      </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Udpspeeder加Udp2raw个人使用模板</title>
-    <url>/wiki/Udpspeeder%E5%8A%A0Udp2raw%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF/</url>
+    <url>/wiki/%E8%B7%AF%E7%94%B1%E5%99%A8/%E5%8D%8E%E7%A1%95/Udpspeeder%E5%8A%A0Udp2raw%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<h1 id="Udpspeeder"><a href="#Udpspeeder" class="headerlink" title="Udpspeeder"></a>Udpspeeder</h1><h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端:"></a>服务端:</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">请逐行执行,并自行修改相关内容</span><br><span class="line"># mkdir /root/udpspeeder</span><br><span class="line"># cd /root/udpspeeder</span><br><span class="line"># wget https://github.com/wangyu-/UDPspeeder/releases/*自己选择最新版本*</span><br><span class="line"># tar -zxf speederv2_binaries.tar.gz</span><br><span class="line"># ./speederv2_amd64 -s -l0.0.0.0:4096 -r127.0.0.1:48989 -f10:10 -k &quot;password&quot; --mode 0 --timeout 3</span><br></pre></td></tr></table></figure>
 <h3 id="配置介绍"><a href="#配置介绍" class="headerlink" title="配置介绍"></a>配置介绍</h3><ul>
 <li>_amd64     架构  </li>
@@ -83,14 +54,37 @@
       </tags>
   </entry>
   <entry>
-    <title>About Me</title>
-    <url>/wiki/about/</url>
-    <content><![CDATA[<p>KONODIODA!</p>
+    <title>ML的时候,软件中心提示非法?</title>
+    <url>/wiki/%E8%B7%AF%E7%94%B1%E5%99%A8/%E5%8D%8E%E7%A1%95/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>作为一名科学上网er，在中文环境下最喜欢用的就是ASUS路由器的路由器端科学上网了。又方便、又可以对NAT下的设备进行相关的控制。  </p>
+<blockquote>
+<p>这里要感谢我们的前辈!  </p>
+</blockquote>
+<p>但是由于<em>不可抗力</em>，我们在路由器端安装小飞机的时候，会提示含有非法关键词。<br>这时候我们无奈的前辈给出了解决方法</p>
+<blockquote>
+<p>提示1： 如果提示检测到离线安装包名有非法关键词，开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380&#x2F;X7.x版本固件需要请将软件中心更新到1.4.8及以上)  </p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\tdetect_package/\t# detect_package/g&#x27; /koolshare/scripts/ks_tar_install.sh</span><br></pre></td></tr></table></figure>
+
+<p>这时候，我们就可以继续进行科学上网的相关操作了！  </p>
+<p><em>参考资料</em>  </p>
+<ul>
+<li><a href="https://github.com/hq450/fancyss">有关插件</a></li>
+<li><a href="https://koolshare.cn/forum-96-1.html">KS论坛</a></li>
+<li><a href="https://www.asuswrt-merlin.net/">ML官网</a></li>
+</ul>
 ]]></content>
+      <categories>
+        <category>路由器</category>
+        <category>华硕</category>
+      </categories>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
   </entry>
   <entry>
     <title>(施工中)Arch Linux个人安装步骤小记</title>
-    <url>/wiki/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/</url>
+    <url>/wiki/Linux/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a href="https://wiki.archlinux.org/index.php/Arch_Linux">Arch Linux</a>为我目前所使用的 Linux 发行版，我根据自己的实际需求，写出此安装步骤，以系统化学习和方便使用~~面向^C 和^V 的系统安装步骤 XD~~~</strong></p>
 <p><strong>Arch Linux 的官方 Wiki 上推荐使用 Live 系统安装 Arch Linux，我也在使用 Arch 的过程中，虽然也了解了那些一键安装脚本，但是。。。</strong></p>
 <h2 id="毕竟都用-Arch-了，就要做好折腾的觉悟好吧"><a href="#毕竟都用-Arch-了，就要做好折腾的觉悟好吧" class="headerlink" title="毕竟都用 Arch 了，就要做好折腾的觉悟好吧"></a><del>毕竟都用 Arch 了，就要做好折腾的觉悟好吧</del></h2><p><em>那么就让我们开始吧！</em></p>
@@ -117,7 +111,7 @@
 <p>当然这里也可以使用另外一款开源 U 盘刻录软件<a href="https://rufus.ie/">Rufus</a></p>
 <h3 id="确认主板-bios-模式为传统-bios-或是-UEFI-模式"><a href="#确认主板-bios-模式为传统-bios-或是-UEFI-模式" class="headerlink" title="确认主板 bios 模式为传统 bios 或是 UEFI 模式"></a>确认主板 bios 模式为传统 bios 或是 UEFI 模式</h3><p>虽是这么说 Linux 能让老电脑焕发第二春，但是对于那种都已经腐烂的电脑，真的还是不推荐安装此系统，毕竟我们安装 Arch Linux 是用来折腾的，（至少对我来说）。对于风烛残年的老电脑来说，还是让他好好休息吧，干活是年轻人的事情。</p>
 <p>现在（截止于 2021 年）市面上流通的个人电脑，我们安装系统时推荐使用主板 UEFI 模式+硬盘 GPT 模式。并且 UEFI 模式则需在主板 bios 设置中关闭安全启动这一选项。  </p>
-<p><img src="/./BIOS_FASTBOOT.png" alt="BIOS_FASTBOOT"></p>
+<p><img src="/BIOS_FASTBOOT.png" alt="BIOS_FASTBOOT"></p>
 <h3 id="进入-ArchLinux-Live-安装环境"><a href="#进入-ArchLinux-Live-安装环境" class="headerlink" title="进入 ArchLinux Live 安装环境"></a>进入 ArchLinux Live 安装环境</h3><p>这个就比较简单了，选择主板 bios 的启动选项的快捷键还是进如主板 bios 设置修改启动顺序，这些随你的心情，只要选择用 Ventory 制作好的Ｕ盘启动盘就行了。</p>
 <p>进入 U 盘后，选择相应的 Arch Linux 镜像，等待跑码，跑码结束后就是进入命令行输入模式了。</p>
 <h2 id="配置-Live-CD-环境"><a href="#配置-Live-CD-环境" class="headerlink" title="配置 Live CD 环境"></a>配置 Live CD 环境</h2><blockquote>
@@ -169,8 +163,14 @@
       </tags>
   </entry>
   <entry>
+    <title>About Me</title>
+    <url>/wiki/uncategorized/about/</url>
+    <content><![CDATA[<p>KONODIODA!</p>
+]]></content>
+  </entry>
+  <entry>
     <title>提纲</title>
-    <url>/wiki/%E6%8F%90%E7%BA%B2/</url>
+    <url>/wiki/Linux/OpenWRT/%E6%8F%90%E7%BA%B2/</url>
     <content><![CDATA[<h1 id="openwrt-系统简介"><a href="#openwrt-系统简介" class="headerlink" title="openwrt 系统简介"></a>openwrt 系统简介</h1><p>Linksys 公司在2002年底推出的一款无线路由器 WRT-54G ，该路由器的固件不开源，但是由于该路由器使用了遵守 GPL 许可证的源代码，Linksys 于2003年7月迫于多方压力开源了 WRT-54G 无线路由器的固件。这便是 openwrt 系统的前身。  </p>
 <p>openwrt 是一个基于 linux 内核的开源社区发行版。因为其前身是商业公司的无线路由器系统，这使得 openwrt 先天性的拥有商业公司的代码部分，能够被开源社区学习和参考。经过近17年的发展，openwrt 已经成为最流行的开源路由器系统。他的诞生也带来了软路由这一新概念和广阔的蓝海市场。  </p>
 <h1 id="NAS（Network-Attached-Storage-网络附加储存）简介"><a href="#NAS（Network-Attached-Storage-网络附加储存）简介" class="headerlink" title="NAS（Network Attached Storage 网络附加储存）简介"></a>NAS（Network Attached Storage 网络附加储存）简介</h1><p>现在我们提到的 nas ，由两个部分组成：nas 系统和可以运行 nas 系统的 nas 硬件。nas 的主要功能就是为其连接上的网络的其他计算机提供集中的文件储存功能。在此基础上，nas 还扩展出了 RAID（磁盘阵列） 的功能以便提升性能或资料冗余，或是两者同时提升。nas 的出现解决了人们对多主机文件管理的需求，集中式的文件服务器可以为多平台的主机服务，且便于维护，优化局域网的网络主机结构。  </p>
@@ -190,7 +190,7 @@
   </entry>
   <entry>
     <title>Linux &amp; Windows 双系统蓝牙设备共享(包括蓝牙 LE 设备)</title>
-    <url>/wiki/Linux-Windows-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB-%E5%8C%85%E6%8B%AC%E8%93%9D%E7%89%99-LE-%E8%AE%BE%E5%A4%87/</url>
+    <url>/wiki/Linux/Linux-Windows-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB-%E5%8C%85%E6%8B%AC%E8%93%9D%E7%89%99-LE-%E8%AE%BE%E5%A4%87/</url>
     <content><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
 <li>蓝牙设备：</li>
 </ol>
@@ -292,7 +292,7 @@
   </entry>
   <entry>
     <title>OpenWRT 挂载硬盘并设置网络共享</title>
-    <url>/wiki/OpenWRT-%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</url>
+    <url>/wiki/Linux/OpenWRT/OpenWRT-%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/rc.local</span><br><span class="line">echo &quot;152d:0578:u&quot; &gt;&gt; /sys/module/usb_storage/parameters/quirks</span><br><span class="line">sed -i &#x27;s/usb-storage/usb-storage quirks=152d:0578:u/g&#x27; /etc/modules.d/usb-storage</span><br><span class="line"></span><br><span class="line">opkg install lsblk</span><br><span class="line">opkg install shadow-common shadow-useradd</span><br><span class="line">useradd samba</span><br><span class="line">smbpasswd -a samba</span><br><span class="line">chown -R samba:samba /media/nas</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">smbpasswd -x samba</span><br><span class="line">userdel samba</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Linux</category>
