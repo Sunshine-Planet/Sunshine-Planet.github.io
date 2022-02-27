@@ -6,7 +6,7 @@
   <link href="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/"/>
-  <updated>2022-02-08T14:18:09.061Z</updated>
+  <updated>2022-02-11T10:18:06.551Z</updated>
   <id>https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>想买的</title>
+    <link href="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/uncategorized/%E6%83%B3%E4%B9%B0%E7%9A%84/"/>
+    <id>https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/uncategorized/%E6%83%B3%E4%B9%B0%E7%9A%84/</id>
+    <published>2022-02-10T07:52:17.000Z</published>
+    <updated>2022-02-11T10:18:06.551Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;发售日&lt;/th&gt;
+&lt;th&gt;价格&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;WiiU&lt;/td&gt;
+&lt;td&gt;N&amp;#x2F;A&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;t</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>OpenWRT 挂载硬盘并设置网络共享</title>
@@ -101,10 +136,37 @@
   
   <entry>
     <title>(施工中)Arch Linux个人安装步骤小记</title>
+    <link href="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/Linux/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0-Arch-996ICU/"/>
+    <id>https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/Linux/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0-Arch-996ICU/</id>
+    <published>2021-02-24T15:04:42.000Z</published>
+    <updated>2022-02-10T08:01:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/tags/Linux/"/>
+    
+    <category term="使用小计" scheme="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/tags/%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(施工中)Arch Linux个人安装步骤小记</title>
     <link href="https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/Linux/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/"/>
     <id>https://github.com/Sunshine-Planet/Sunshine-Planet.github.io/wiki/Linux/Arch-Linux%E4%B8%AA%E4%BA%BA%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%B0%8F%E8%AE%B0/</id>
     <published>2021-02-24T15:04:42.000Z</published>
-    <updated>2022-02-08T15:29:10.268Z</updated>
+    <updated>2022-02-23T14:56:51.457Z</updated>
     
     
       
