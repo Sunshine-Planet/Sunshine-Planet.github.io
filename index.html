@@ -489,7 +489,7 @@
             
         
         
-            <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/rc.local</span><br><span class="line">echo &quot;152d:0578:u&quot; &gt;&gt; /sys/module/usb_storage/parameters/quirks</span><br><span class="line">sed -i &#x27;s/usb-storage/usb-storage quirks=152d:0578:u/g&#x27; /etc/modules.d/usb-storage</span><br><span class="line"></span><br><span class="line">opkg install lsblk</span><br><span class="line">opkg install shadow-common shadow-useradd</span><br><span class="line">useradd samba</span><br><span class="line">smbpasswd -a samba</span><br><span class="line">chown -R samba:samba /media/nas</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">smbpasswd -x samba</span><br><span class="line">userdel samba</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/rc.local</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;152d:0578:u&quot;</span> &gt;&gt; /sys/module/usb_storage/parameters/quirks</span><br><span class="line">sed -i <span class="string">&#x27;s/usb-storage/usb-storage quirks=152d:0578:u/g&#x27;</span> /etc/modules.d/usb-storage</span><br><span class="line"></span><br><span class="line">opkg install lsblk</span><br><span class="line">opkg install shadow-common shadow-useradd</span><br><span class="line">useradd samba</span><br><span class="line">smbpasswd -a samba</span><br><span class="line"><span class="built_in">chown</span> -R samba:samba /media/nas</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">smbpasswd -x samba</span><br><span class="line">userdel samba</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -557,7 +557,7 @@
                 
                 
                     
-                    <p></p><h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
+                    <p></p><h2 id="Linux-amp-Windows-双系统蓝牙设备共享-包括蓝牙-LE-设备"><a href="#Linux-amp-Windows-双系统蓝牙设备共享-包括蓝牙-LE-设备" class="headerlink" title="Linux &amp; Windows 双系统蓝牙设备共享(包括蓝牙 LE 设备)"></a>Linux &amp; Windows 双系统蓝牙设备共享(包括蓝牙 LE 设备)</h2><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ol>
 <li>蓝牙设备：</li>
 <p>
                 
