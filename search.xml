@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ML的时候,软件中心提示非法?</title>
-    <url>/wiki/%E8%B7%AF%E7%94%B1%E5%99%A8/%E5%8D%8E%E7%A1%95/ML%E7%9A%84%E6%97%B6%E5%80%99-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>作为一名科学上网er，在中文环境下最喜欢用的就是ASUS路由器的路由器端科学上网了。又方便、又可以对NAT下的设备进行相关的控制。  </p>
-<blockquote>
-<p>这里要感谢我们的前辈!  </p>
-</blockquote>
-<p>但是由于<em>不可抗力</em>，我们在路由器端安装小飞机的时候，会提示含有非法关键词。<br>这时候我们无奈的前辈给出了解决方法</p>
-<blockquote>
-<p>提示1： 如果提示检测到离线安装包名有非法关键词，开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380&#x2F;X7.x版本固件需要请将软件中心更新到1.4.8及以上)  </p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\tdetect_package/\t# detect_package/g&#x27; /koolshare/scripts/ks_tar_install.sh</span><br></pre></td></tr></table></figure>
-
-<p>这时候，我们就可以继续进行科学上网的相关操作了！  </p>
-<p><em>参考资料</em>  </p>
-<ul>
-<li><a href="https://github.com/hq450/fancyss">有关插件</a></li>
-<li><a href="https://koolshare.cn/forum-96-1.html">KS论坛</a></li>
-<li><a href="https://www.asuswrt-merlin.net/">ML官网</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>路由器</category>
-        <category>华硕</category>
-      </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(已过期)Udpspeeder加Udp2raw个人使用模板</title>
     <url>/wiki/%E8%B7%AF%E7%94%B1%E5%99%A8/%E5%8D%8E%E7%A1%95/Udpspeeder%E5%8A%A0Udp2raw%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<h1 id="Udpspeeder"><a href="#Udpspeeder" class="headerlink" title="Udpspeeder"></a>Udpspeeder</h1><h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端:"></a>服务端:</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">请逐行执行,并自行修改相关内容</span><br><span class="line"># mkdir /root/udpspeeder</span><br><span class="line"># cd /root/udpspeeder</span><br><span class="line"># wget https://github.com/wangyu-/UDPspeeder/releases/*自己选择最新版本*</span><br><span class="line"># tar -zxf speederv2_binaries.tar.gz</span><br><span class="line"># ./speederv2_amd64 -s -l0.0.0.0:4096 -r127.0.0.1:48989 -f10:10 -k &quot;password&quot; --mode 0 --timeout 3</span><br></pre></td></tr></table></figure>
@@ -427,5 +398,27 @@
 </tr>
 </tbody></table>
 ]]></content>
+  </entry>
+  <entry>
+    <title>ML的时候,软件中心提示非法?</title>
+    <url>/wiki/%E8%B7%AF%E7%94%B1%E5%99%A8/%E5%8D%8E%E7%A1%95/%E5%8D%8E%E7%A1%95%E8%B7%AF%E7%94%B1%E5%99%A8-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E6%8F%90%E7%A4%BA%E9%9D%9E%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="由于某些原因，使用软件中心离线安装某些插件时的时候，会提示含有非法关键词"><a href="#由于某些原因，使用软件中心离线安装某些插件时的时候，会提示含有非法关键词" class="headerlink" title="由于某些原因，使用软件中心离线安装某些插件时的时候，会提示含有非法关键词"></a>由于<em>某些原因</em>，使用软件中心离线安装某些插件时的时候，会提示含有非法关键词</h2><p>开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380&#x2F;X7.x版本固件需要请将软件中心更新到1.4.8及以上)  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s/\tdetect_package/\t# detect_package/g&#x27;</span> /koolshare/scripts/ks_tar_install.sh</span><br></pre></td></tr></table></figure>
+
+<p>这时候，我们就可以重新继续进行离线安装  </p>
+<p><em>参考资料</em>  </p>
+<ul>
+<li><a href="https://github.com/hq450/fancyss">有关插件</a></li>
+<li><a href="https://koolcenter.com/">KC论坛</a></li>
+<li><a href="https://www.asuswrt-merlin.net/">ML官网</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>路由器</category>
+        <category>华硕</category>
+      </categories>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
   </entry>
 </search>
